@@ -2,7 +2,7 @@
 
 ## Description and Credits
  - This project is a desktop application for a slot machine game. It was created as a group project for the Software Engineering course, EC327, at Boston University.
- - My role was Technical Lead. I was responsible for the following:
+ - ***My role was Technical Lead. I was responsible for the following***:
    - Chose and researched the Godot gaming engine and made other essential game design choices.
    - Created and animdated most of the 3D assets in Blender (including the machine itself) and converting them to animated sprites.
    - All of the programming of the slot machine itself (pulling the lever, the spinning of the wheels, movement/inserting of coins, win logic, dynamic difficulty settings, etc.
