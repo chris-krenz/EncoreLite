@@ -1,0 +1,106 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://fonts/fp9b8a.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Credits_button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Play_Button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Music/BackgroundMusic.mp3" type="AudioStream" id=4]
+[ext_resource path="res://FadeIn.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/Slot_Title_Menu.gd" type="Script" id=6]
+[ext_resource path="res://Music/ButtonSound_Merged.mp3" type="AudioStream" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_color = Color( 0.0980392, 0.0901961, 0.0901961, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 1 )
+
+[node name="Slot_Title_Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.894118, 0.0470588, 0.0470588, 1 )
+
+[node name="Container" type="Container" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 194.0
+margin_top = 112.0
+margin_right = 194.0
+margin_bottom = 112.0
+
+[node name="Play_Button" parent="Container" instance=ExtResource( 3 )]
+margin_left = 200.0
+margin_top = 250.0
+margin_right = 500.0
+margin_bottom = 300.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_colors/font_color_hover = Color( 0.894118, 0.701961, 0.0392157, 1 )
+custom_colors/font_color_pressed = Color( 0.368627, 0.905882, 0.0666667, 1 )
+scene_to_load = "res://SlotMachine.tscn"
+
+[node name="Credits_button" parent="Container" instance=ExtResource( 2 )]
+margin_left = 200.0
+margin_top = 375.0
+margin_right = 500.0
+margin_bottom = 380.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_colors/font_color_hover = Color( 0.717647, 0.854902, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.247059, 0.870588, 0.0470588, 1 )
+
+[node name="FadeIn" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[node name="Logo" type="Label" parent="."]
+margin_left = 318.0
+margin_top = 64.0
+margin_right = 1182.0
+margin_bottom = 169.0
+custom_colors/font_color = Color( 0.862745, 0.803922, 0.0705882, 1 )
+custom_colors/font_outline_modulate = Color( 0.0627451, 0.0627451, 0.0627451, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+custom_fonts/font = SubResource( 1 )
+text = "EncoreLite: An EC327 Project
+Fall 2022"
+align = 1
+valign = 1
+
+[node name="Team_Info" type="Label" parent="."]
+margin_left = 913.0
+margin_top = 275.0
+margin_right = 1168.0
+margin_bottom = 566.0
+custom_colors/font_color = Color( 0.811765, 0.737255, 0.109804, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = SubResource( 2 )
+text = "Team Member:
+
+Ryan Darrow
+Chris Krenz
+Jayden Raphino
+Matthew Rhee
+Yanbo (Mark) Zhu"
+align = 1
+
+[node name="BackGroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.302
+autoplay = true
+
+[node name="ButtonMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[connection signal="load_new" from="FadeIn" to="." method="_on_FadeIn_load_new"]
+[connection signal="transitioned" from="FadeIn" to="." method="_on_FadeIn_transitioned"]

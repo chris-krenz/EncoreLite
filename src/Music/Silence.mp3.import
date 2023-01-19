@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Silence.mp3-34aa3718b24f44ba6e5fb57a94fe7595.mp3str"
+
+[deps]
+
+source_file="res://Music/Silence.mp3"
+dest_files=[ "res://.import/Silence.mp3-34aa3718b24f44ba6e5fb57a94fe7595.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

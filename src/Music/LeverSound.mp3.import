@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/LeverSound.mp3-d1ff827655a31c520ec000b2218c2d10.mp3str"
+
+[deps]
+
+source_file="res://Music/LeverSound.mp3"
+dest_files=[ "res://.import/LeverSound.mp3-d1ff827655a31c520ec000b2218c2d10.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
